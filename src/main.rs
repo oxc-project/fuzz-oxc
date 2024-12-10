@@ -18,7 +18,7 @@ fn main() -> Result<(), String> {
     let path = Path::new(&name);
 
     let source_text = std::fs::read_to_string(path).unwrap_or_else(|_| panic!("{name} not found"));
-    let source_type = SourceType::from_path(path).unwrap();
+    let source_type = SourceType::cjs();
 
     let s1 = Driver::default()
         .run(path, &source_text, source_type)
