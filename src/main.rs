@@ -4,13 +4,13 @@ use std::{
 };
 
 use oxc::{
+    CompilerInterface,
     codegen::{CodegenOptions, CodegenReturn},
     diagnostics::{Error, OxcDiagnostic},
     minifier::CompressOptions,
     parser::ParseOptions,
     span::SourceType,
     transformer::TransformOptions,
-    CompilerInterface,
 };
 
 fn main() -> Result<(), String> {
