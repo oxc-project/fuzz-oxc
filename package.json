@@ -1,6 +1,7 @@
 {
   "name": "fuzz-oxc",
   "private": true,
+  "packageManager": "pnpm@11.0.4",
   "scripts": {
     "start": "cargo build --release && node main.js ./target/release/fuzzer"
   },
