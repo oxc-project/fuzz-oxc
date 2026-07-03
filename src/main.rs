@@ -6,7 +6,7 @@ use std::{
 use oxc::{
     CompilerInterface,
     codegen::{CodegenOptions, CodegenReturn},
-    diagnostics::{Error, OxcDiagnostic},
+    diagnostics::{Diagnostics, Error, OxcDiagnostic},
     minifier::CompressOptions,
     parser::ParseOptions,
     span::SourceType,
@@ -46,7 +46,7 @@ pub struct Driver {
 }
 
 impl CompilerInterface for Driver {
-    fn handle_errors(&mut self, errors: Vec<OxcDiagnostic>) {
+    fn handle_errors(&mut self, errors: Diagnostics) {
         self.errors.extend(errors);
     }
 

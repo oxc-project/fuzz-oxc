@@ -3,6 +3,7 @@ name    = "oxc_fuzz"
 version = "0.0.0"
 publish = false
 edition = "2021"
+license = "MIT"
 
 # Prevent this from interfering with workspaces
 [workspace]
@@ -24,6 +25,6 @@ test = false
 doctest = false
 
 [dependencies]
-oxc = "0.131.0"
-oxc_regular_expression = "0.131.0"
+oxc = "0.138.0"
+oxc_regular_expression = "0.138.0"
 libfuzzer-sys = "0.4.7"
