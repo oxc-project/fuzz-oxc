@@ -3,6 +3,7 @@ name    = "oxc_fuzz"
 version = "0.0.0"
 publish = false
 edition = "2021"
+license = "MIT"
 
 # Prevent this from interfering with workspaces
 [workspace]
