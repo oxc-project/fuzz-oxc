@@ -25,10 +25,7 @@ fn main() -> Result<(), String> {
         // .inspect_err(|err| panic!("{err:?}"))
         .unwrap_or_default();
 
-    Driver::default()
-        .run(path, &s1, source_type)
-        .map(|_| ())
-        .map_err(|err| panic!("{err:?}"))
+    Driver::default().run(path, &s1, source_type).map(|_| ()).map_err(|err| panic!("{err:?}"))
 }
 
 #[allow(clippy::struct_excessive_bools)]
@@ -71,9 +68,7 @@ impl CompilerInterface for Driver {
     }
 
     fn codegen_options(&self) -> Option<CodegenOptions> {
-        Some(CodegenOptions {
-            ..CodegenOptions::default()
-        })
+        Some(CodegenOptions { ..CodegenOptions::default() })
     }
 }
 
