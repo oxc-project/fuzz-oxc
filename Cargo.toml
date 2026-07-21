@@ -6,6 +6,6 @@ license = "MIT"
 publish = false
 
 [dependencies]
-oxc = { version = "0.140.0", features = ["full"]}
+oxc = { version = "0.141.0", features = ["full"]}
 
 libfuzzer-sys = "0.4.10"
