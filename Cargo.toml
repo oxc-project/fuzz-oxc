@@ -9,3 +9,9 @@ publish = false
 oxc = { version = "0.144.0", features = ["full"]}
 
 libfuzzer-sys = "0.4.10"
+
+[profile.dev]
+debug = "line-tables-only"
+
+[profile.dev.package."*"]
+debug = false
